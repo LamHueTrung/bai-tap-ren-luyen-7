@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+    <title>Tự học Lập Trình Cùng LHT</title>
+    <link rel="icon" href="http://abctech.vn/wp-content/uploads/2017/06/logo-nen-xanh.jpg" type="image/x-icon" />
+
+</head>
+<body>
+    <header class="header">
+        <ul class="header_list">
+            <li class="header_items header-menu">
+                    <i class="menu-mobile fas fa-bars"></i>
+            </li>
+            <ul class="header_list-mobile">
+
+                <li class="header_items">
+                    <a href="https://lamhuetrung.github.io/index.html">
+                        <i class="fas fa-home"></i>
+                        <span></span>
+                    </a>
+                </li>
+               
+                <li class="header_items">
+                    <a href="#bai-tap">
+                        <i class="fas fa-book"></i>
+                        <span></span>
+                    </a>
+                </li>
+                <li class="header_items">
+                    <a href="https://www.facebook.com/T%E1%BB%B1-h%E1%BB%8Dc-l%E1%BA%ADp-Tr%C3%ACnh-c%C3%B9ng-LHT-110968584718753">
+                        <i class="fas fa-question"></i>
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="gird__column-2">
+            <div class="content_LT">
+                <div class="content__BT">
+                    <h1 class="BT__tieu-de">Problem</h1>
+                    <span class="BT__noi-dung">Number Is Divisible By 11 Using (VEDIC MATH).</span>
+                    <span class="BT__noi-dung ">(Tiếng việt: kiểm tra 1 số có chia hết cho 11 hay không nhưng không dùng toán tử số học)</span>
+                    <span class="BT__noi-dung">=> Nguồn: <a href="https://www.programmingwithbasics.com/2016/04/c-program-to-check-whether-entered.html"><span class="link">https://www.programiz.com</span></a>.</span>
+                </div>
+                <div class="content__BT">
+                    <h1 class="BT__tieu-de">Suggestions</h1>
+                    <span class="BT__noi-dung">+ Một số chia hết cho 11 nếu như tổng các giá trị ở vị trí chẵn bằng tổng các giá trị tại vị trí lẻ.</span>
+                    <span class="BT__noi-dung">+ Sử dụng vòng lặp while/Do-while.</span>
+                    <h1 class="BT__noi-dung--TD">Nhắc lại kiến thức</h1>
+                    <span class="BT__noi-dung">Vòng lặp while</span>
+                    <pre class="BT__output">
+                        <code class="BT__output">
+while (điều kiện lặp) {
+    khối lệnh;
+}
+                        </code>
+                    </pre>
+                    <span class="BT__noi-dung">Vòng lặp Do-while</span>
+                    <pre class="BT__output">
+                        <code class="BT__output">
+do {
+    khối lệnh;
+} while (điều kiện lặp);
+                        </code>
+                    </pre>
+                    <span class="BT__noi-dung">+ Sử dụng kiến thức if.</span>
+                    <pre class="BT__output">
+                        <code class="BT__output">
+if (điều kiện) {
+    câu lệnh;
+} else {
+    khối lệnh 2;
+}
+                        </code>
+                    </pre>
+                </div>
+                <div class="content__BT">
+                    <h1 class="BT__tieu-de">Code mẫu: </h1>
+                    <pre class="BT__output">
+                        <code class="BT__output">
+#include < stdio.h >
+
+int main() {
+	int ques;
+	do {
+		int n, t1;
+	int n_0, t2 = 0, i = 1, sum_1 = 0, sum_2 = 0;
+	printf("\n nhap so can kiem tra: ");
+	scanf("%d", &n);
+	n_0 = n;
+	while ( n != 0) {
+		t1 = n % 10;
+		t2 = t2*10 + t1;
+		n /= 10;
+	}
+	while (t2 != 0 ) {
+		t1 = t2 % 10;
+		if (i%2 == 0) {
+			sum_1 += t1;
+		} else {
+			sum_2 += t1;
+		}
+		t2 /= 10;
+		i++;
+	}
+	if (sum_1 == sum_2) {
+		printf("=> %d chia het cho 11", n_0);
+	} else
+		printf("=> %d khong chia het cho 11", n_0);
+	printf("\n\n ban co muon tiep tuc kiem tra ?");
+	printf("\n + Dong y => an phim 1");
+	printf("\n + Khong dong y => an phim 0 \n");
+	scanf("%d", &ques);
+	} while (ques == 1);
+	return 0;
+}
+
+                        </code>
+                    </pre>
+                    <span class="BT__noi-dung">Xem tiếp video hướng dẫn nếu bạn vẫn chưa hiểu nhé.</span>
+                </div>
+            </div>
+            <div class="content__HD">
+                <h1>Video hướng dẫn </h1>
+                <video class="video" controls>
+                    <source src="./assets/video/video.webm" type="video/mp4">
+                </video>
+                <a class="btn-next not-next">Bài tiếp theo</a>
+            </div>
+    </div>
+    
+</body>
+</html>
